@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { logo, phoneIcon, locationIcon } from "assets/images";
 import { Typography } from "components/atoms";
 import { DropDown } from "components/molecules";
-import { NavLinkType, ProductsOptionsType, ProductSubOptionsType } from "types";
+import { NavLinkType, ProductsOptionsType } from "types";
 import "./index.css";
 
 export const Header = () => {
