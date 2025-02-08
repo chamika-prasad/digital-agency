@@ -1,0 +1,17 @@
+@import "./../../../styles/colors.css";
+
+.image-holder-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 23px 58px;
+    background-color: var(--white-smoke);
+}
+
+.image-holder-image{
+    width: 95px;
+    height: 93px;
+}

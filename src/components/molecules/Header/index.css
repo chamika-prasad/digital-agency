@@ -1,0 +1,66 @@
+@import "../../../styles/colors.css";
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-top-row {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 160px;
+    padding: 11px 70px;
+}
+
+.header-icon-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--vivid-orange);
+    height: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.header-logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 86px;
+}
+
+.header-nav-link{
+    text-decoration: none;
+}
+
+.header-nav-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    position: relative;
+}
+
+.header-selected {
+    height: 11px;
+    width: 11px;
+    background-color: var(--white);
+    border-radius: 50%;
+}

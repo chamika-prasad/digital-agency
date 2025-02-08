@@ -1,0 +1,67 @@
+@import "./../../../styles/colors.css";
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.layout-top-row{
+    padding: 35px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--pumpkin-orange);
+}
+
+.layout-sub-topic-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.layout-middle-row{
+    width: 100%;
+    display: flex;
+}
+
+.layout-middle-row-image{
+    width: 100%;
+}
+
+.layout-bottom-row{
+    width: 100%;
+    display: flex;
+    padding: 74px;
+    box-sizing: border-box;
+}
+
+.layout-products-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.layout-director-board-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 30px 54px;
+    gap: 40px;
+}
+
+.layout-director-board-directors{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}

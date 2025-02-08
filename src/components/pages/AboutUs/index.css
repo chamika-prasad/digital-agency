@@ -1,0 +1,28 @@
+@import "./../../../styles/colors.css";
+
+.about-us-page-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.about-us-middle-node-wrapper{
+    display: flex;
+    gap: 33px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: var(--light-gray);
+    width: 100%;
+}
+
+.about-us-middle-node-content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: start;
+    align-items: start;
+}
+
+.about-us-middle-discription{
+    max-width: 450px;
+}

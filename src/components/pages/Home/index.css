@@ -1,0 +1,78 @@
+@import "./../../../styles/colors.css";
+
+.homepage-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-top-wrapper {
+    width: 100%;
+    background-image: url("./../../../assets/images/bg_4.png"), url("./../../../assets/images/bg_1.png"), url("./../../../assets/images/bg_2.png"), url("./../../../assets/images/bg_3.png");
+    background-position: left bottom, right top, left bottom, right bottom;
+    background-size: auto, auto, 100% 60%, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat,no-repeat;
+    padding: 102px 48px 72px 48px;
+    box-sizing: border-box;
+}
+
+.homepage-top-content {
+    display: flex;
+}
+
+.homepage-bottom-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage-bottom-left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    width: 50%;
+    margin-top: 70px;
+}
+
+.homepage-bottom-right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.homepage-bottom-right-top-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.homepage-img_3{
+    width: 174px;
+    height: 148px;
+}
+
+.homepage-btn {
+    width: fit-content;
+    padding: 13px 31px;
+    background-image: linear-gradient(to right, var(--flame-orange), var(--sunset-orange));
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    border-radius: 40px;
+    margin-left: 150px;
+}
+
+.homepage-bottom-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,79 @@
+@import "../../../styles/colors.css";
+
+footer {
+    width: 100%;
+    background-color: var(--brownish-orange);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top-row {
+    padding: 60px 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo-wrapper,
+.footer-content-3 {
+    display: flex;
+    justify-content: start;
+}
+
+.footer-logo-wrapper{
+    align-items: start;
+    padding-top: 10px;
+}
+
+.footer-content-3{
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-icon-holder{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.footer-content-1,
+.footer-content-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+}
+
+.footer-sub-content-1,.footer-sub-content-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.footer-sub-content-1{
+    gap: 10px;
+}
+
+.footer-sub-content-2{
+    gap: 15px;
+}
+
+.footer-contact-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-bottom-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--light-gray);
+}
