@@ -1,5 +1,4 @@
 import { Typography } from "components/atoms";
-import { ProductType } from "types";
 import "./index.css";
 
 interface IProps {

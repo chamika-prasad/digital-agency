@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from 'store'
-import { ProductType,ProductStateType } from 'types'
+import { ProductStateType } from 'types'
 
 const initialState: ProductStateType = {
     isProductShow: false,
