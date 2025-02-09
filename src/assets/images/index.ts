@@ -17,7 +17,12 @@ import chick_feed from "assets/images/chick_feed.png";
 import feed_1 from "assets/images/feed_1.png";
 import feed_2 from "assets/images/feed_2.png";
 import feed_3 from "assets/images/feed_3.png";
+import feed_4 from "assets/images/feed_4.png";
+import feed_5 from "assets/images/feed_5.png";
+import feed_6 from "assets/images/feed_6.png";
 import arrow_forward from "assets/images/arrow_forward.svg";
+import chicken_bg from "assets/images/chicken_bg.png";
+import fish_bg from "assets/images/fish_bg.png";
 
 export {
     logoLg,
@@ -39,5 +44,10 @@ export {
     feed_1,
     feed_2,
     feed_3,
-    arrow_forward
+    feed_4,
+    feed_5,
+    feed_6,
+    arrow_forward,
+    chicken_bg,
+    fish_bg
 }; 

@@ -1,7 +1,9 @@
 import { Typography } from 'components/atoms';
 import { ProductType } from 'types';
-import { Product,ImageHolder } from 'components/molecules';
-import { director_1,director_2,director_3 } from 'assets/images';
+import { Product, ImageHolder } from 'components/molecules';
+import { director_1, director_2, director_3 } from 'assets/images';
+import { useAppDispatch } from "hooks/hooks";
+import { setProduct } from 'slices/productSlice';
 import "./index.css";
 
 interface IProps {
@@ -16,6 +18,12 @@ interface IProps {
 }
 
 export const PageLayout = ({ page, primaryTopic, secondaryTopic, tertiaryTopic, discription, middleNode, middleImage, products }: IProps) => {
+    const dispatch = useAppDispatch();
+
+    const handleProductClick = (product: ProductType) => {
+        dispatch(setProduct({ product: product, isProductShow: true }))
+    }
+
     return (
         <div className={`layout ${page}-layout-wrapper`}>
             <div className='layout-top-row'>
@@ -30,7 +38,7 @@ export const PageLayout = ({ page, primaryTopic, secondaryTopic, tertiaryTopic, 
             </div>
             <div className='layout-middle-row'>
                 {
-                    middleNode ? middleNode : <img src={`${middleImage}`} className='layout-middle-row-image'/>
+                    middleNode ? middleNode : <img src={`${middleImage}`} className='layout-middle-row-image' />
                 }
             </div>
             <div className='layout-bottom-row'>
@@ -38,7 +46,7 @@ export const PageLayout = ({ page, primaryTopic, secondaryTopic, tertiaryTopic, 
                     products ?
                         <div className='layout-products-wrapper'>
                             {
-                                products.map((product: ProductType) => (<Product key={product.id} imgSrc={product.image} name={product.name} />))
+                                products.map((product: ProductType) => (<Product key={product.id} imgSrc={product.image} name={product.name} onClick={() => handleProductClick(product)} />))
                             }
                         </div>
                         :

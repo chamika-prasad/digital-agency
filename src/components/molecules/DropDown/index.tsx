@@ -1,19 +1,30 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { arrow_forward } from "assets/images";
 import { Typography } from "components/atoms";
-import { ProductsOptionsType, ProductSubOptionsType } from "types";
+import { ProductsOptionsType, ProductSubOptionsType, ProductType } from "types";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "hooks/hooks";
+import { setProduct } from "slices/productSlice";
 import "./index.css";
 
 interface IProps {
     options: ProductsOptionsType[];
-    setIsAboutUsDropDownShow: Dispatch<SetStateAction<boolean>>;
+    setIsProductDropDownShow: Dispatch<SetStateAction<boolean>>;
 }
 
-export const DropDown = ({ options, setIsAboutUsDropDownShow }: IProps) => {
+export const DropDown = ({ options, setIsProductDropDownShow }: IProps) => {
 
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const [activeOptionId, setActiveOptionId] = useState<number | null>(null);
+    const nullProduct: ProductType =
+    {
+        id: null,
+        image: null,
+        name: null,
+        ingredients: null,
+        packSizes: null
+    }
 
     const handleMouseEnter = (optionId: number) => {
         setActiveOptionId(optionId);
@@ -21,21 +32,23 @@ export const DropDown = ({ options, setIsAboutUsDropDownShow }: IProps) => {
 
     const handleMouseLeave = () => {
         setActiveOptionId(null);
-        setIsAboutUsDropDownShow(false)
+        setIsProductDropDownShow(false)
     }
 
     const handleOptionNavigate = (option: string, isSubOptionhave: boolean) => {
         // event.stopPropagation();
         if (!isSubOptionhave) {
-            console.log("clicked");
             navigate(`/products`, { state: { option: option, subOption: null } })
+            dispatch(setProduct({ product: nullProduct, isProductShow: false }))
             setActiveOptionId(null);
-            setIsAboutUsDropDownShow(false)
+            setIsProductDropDownShow(false)
         }
     }
 
     const handleSubOptionNavigate = (option: string, subOption: string) => {
         // event.stopPropagation();
+
+        dispatch(setProduct({ product: nullProduct, isProductShow: false }))
         navigate(`/products`, { state: { option: option, subOption: subOption } })
     }
 
@@ -47,7 +60,7 @@ export const DropDown = ({ options, setIsAboutUsDropDownShow }: IProps) => {
                         <div className={`dropdown-option ${option.subOptions.length > 0 ? "justify-space-between" : "justify-start"}`} key={option.id} onMouseEnter={() => handleMouseEnter(index)} onClick={() => handleOptionNavigate(option.name, option.subOptions.length > 0)}>
                             <Typography variant="p" label={option.name} className="p-400-sm no-wrap" />
                             {option.subOptions.length > 0 ? <img src={arrow_forward} alt="arrow_forward" /> : null}
-                            {activeOptionId === index ?
+                            {activeOptionId === index && option.subOptions.length > 0 ?
                                 <div className="dropdown-wrapper inner-dropdown w-fit">
                                     {
                                         option.subOptions.map((subOption: ProductSubOptionsType) => {

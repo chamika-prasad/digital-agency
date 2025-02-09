@@ -7,8 +7,7 @@ import { NavLinkType, ProductsOptionsType } from "types";
 import "./index.css";
 
 export const Header = () => {
-
-    const [isAboutUsDropDownShow, setIsAboutUsDropDownShow] = useState(false)
+    const [isProductDropDownShow, setIsProductDropDownShow] = useState(false)
 
     const navLinks: NavLinkType[] = [
         { name: "Home", path: "/" },
@@ -21,7 +20,7 @@ export const Header = () => {
     const productsOptions: ProductsOptionsType[] = [
         {
             id: 1,
-            name: "Poultry Feed",
+            name: "Poultry",
             subOptions: [
                 {
                     id: 1,
@@ -48,9 +47,9 @@ export const Header = () => {
     const handleNavigation = (event: React.MouseEvent<HTMLAnchorElement>, path: string) => {
         if (path === "/products") {
             event.preventDefault();
-            setIsAboutUsDropDownShow(true)
+            setIsProductDropDownShow(true)
         } else {
-            setIsAboutUsDropDownShow(false)
+            setIsProductDropDownShow(false)
         }
     }
 
@@ -80,7 +79,7 @@ export const Header = () => {
                                         <div className="header-nav-link-wrapper">
                                             {isActive && <div className="header-selected"></div>}
                                             <Typography variant="p" label={link.name} className="p-400-sm text-white" />
-                                            {link.name === "Products" && isAboutUsDropDownShow ? <DropDown options={productsOptions} setIsAboutUsDropDownShow={setIsAboutUsDropDownShow} /> : null}
+                                            {link.name === "Products" && isProductDropDownShow ? <DropDown options={productsOptions} setIsProductDropDownShow={setIsProductDropDownShow} /> : null}
                                         </div>
                                     )}
                                 </NavLink>
